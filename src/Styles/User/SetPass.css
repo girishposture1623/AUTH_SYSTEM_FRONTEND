@@ -1,0 +1,254 @@
+/* =========================================
+   SET PASSWORD CONTAINER
+========================================= */
+
+.set-password-container {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 60px auto;
+    padding: 40px 45px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.15);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.set-password-container h1 {
+    margin: 0 0 15px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.set-password-container > p {
+    margin: 0 0 30px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.set-password-container form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.set-password-container input {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 18px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.set-password-container input::placeholder {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* =========================================
+   INPUT FOCUS
+========================================= */
+
+.set-password-container input:focus {
+    background: rgba(255, 255, 255, 0.14);
+
+    border-color: rgba(255, 255, 255, 0.55);
+
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.set-password-container button {
+    width: 100%;
+    height: 52px;
+
+    margin-top: 5px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: #5f5bd7;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   BUTTON HOVER
+========================================= */
+
+.set-password-container button:hover:not(:disabled) {
+    background: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   BUTTON ACTIVE
+========================================= */
+
+.set-password-container button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   BUTTON DISABLED
+========================================= */
+
+.set-password-container button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================
+   BACK TO DASHBOARD
+========================================= */
+
+.set-password-container > a {
+    display: block;
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================
+   LINK HOVER
+========================================= */
+
+.set-password-container > a:hover {
+    opacity: 0.8;
+
+    text-decoration: underline;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .set-password-container {
+        max-width: calc(100% - 30px);
+
+        margin: 35px auto;
+
+        padding: 30px 20px;
+    }
+
+    .set-password-container h1 {
+        font-size: 27px;
+    }
+
+    .set-password-container > p {
+        font-size: 14px;
+    }
+
+    .set-password-container input,
+    .set-password-container button {
+        height: 50px;
+    }
+}

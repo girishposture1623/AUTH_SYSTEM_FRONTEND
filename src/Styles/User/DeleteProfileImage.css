@@ -1,0 +1,195 @@
+/* =========================================
+   DELETE PROFILE IMAGE
+========================================= */
+
+.delete-profile-image-container {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 60px auto;
+    padding: 40px 45px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.15);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.delete-profile-image-container h1 {
+    margin: 0 0 30px;
+
+    color: #ffffff;
+
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   PROFILE IMAGE
+========================================= */
+
+.delete-profile-image-container img {
+    width: 150px;
+    height: 150px;
+
+    display: block;
+
+    margin: 0 auto 30px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid rgba(255, 255, 255, 0.85);
+
+    background: rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================
+   DELETE BUTTON
+========================================= */
+
+.delete-profile-image-container button {
+    width: 100%;
+    height: 52px;
+
+    margin-top: 5px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #dc3545;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   BUTTON HOVER
+========================================= */
+
+.delete-profile-image-container button:hover:not(:disabled) {
+    background: #fff5f5;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   BUTTON ACTIVE
+========================================= */
+
+.delete-profile-image-container button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   BUTTON DISABLED
+========================================= */
+
+.delete-profile-image-container button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================
+   BACK TO DASHBOARD
+========================================= */
+
+.delete-profile-image-container > a {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================
+   LINK HOVER
+========================================= */
+
+.delete-profile-image-container > a:hover {
+    opacity: 0.8;
+
+    text-decoration: underline;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .delete-profile-image-container {
+        max-width: calc(100% - 30px);
+
+        margin: 35px auto;
+
+        padding: 30px 20px;
+    }
+
+    .delete-profile-image-container h1 {
+        font-size: 27px;
+    }
+
+    .delete-profile-image-container img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .delete-profile-image-container button {
+        height: 50px;
+    }
+}

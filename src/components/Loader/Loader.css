@@ -1,0 +1,234 @@
+/* ============================================
+   AUTH SYSTEM - Premium Loading Animation
+   ============================================ */
+
+/* Root container - full screen overlay */
+.auth-loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Prevent body scroll while loader is visible */
+.auth-loader-active {
+  overflow: hidden;
+}
+
+/* Content wrapper - centers all child elements */
+.auth-loader-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+}
+
+/* ============================================
+   Rotating Ring Animation
+   ============================================ */
+
+.auth-loader-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #2563eb;
+  border-right-color: #1e40af;
+  animation: auth-loader-spin 3s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes auth-loader-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Inner decorative ring for depth */
+.auth-loader-ring::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-bottom-color: #3b82f6;
+  border-left-color: #93c5fd;
+  animation: auth-loader-spin-reverse 4s linear infinite;
+}
+
+@keyframes auth-loader-spin-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* ============================================
+   Logo Container with Pulse
+   ============================================ */
+
+.auth-loader-logo-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 
+    0 10px 30px rgba(37, 99, 235, 0.1),
+    0 0 60px rgba(37, 99, 235, 0.05);
+  animation: 
+    auth-loader-fade-in 0.8s ease-out 0.2s backwards,
+    auth-loader-pulse 3s ease-in-out 1s infinite;
+}
+
+/* Fade in animation for logo container */
+@keyframes auth-loader-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Subtle pulse animation */
+@keyframes auth-loader-pulse {
+  0%,
+  100% {
+    box-shadow: 
+      0 10px 30px rgba(37, 99, 235, 0.1),
+      0 0 60px rgba(37, 99, 235, 0.05);
+  }
+  50% {
+    box-shadow: 
+      0 10px 35px rgba(37, 99, 235, 0.15),
+      0 0 80px rgba(37, 99, 235, 0.1);
+  }
+}
+
+/* ============================================
+   Logo Image
+   ============================================ */
+
+.auth-loader-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+/* Tablet (768px and down) */
+@media (max-width: 768px) {
+  .auth-loader-content {
+    width: 120px;
+    height: 120px;
+  }
+
+  .auth-loader-ring {
+    border-width: 3px;
+  }
+
+  .auth-loader-logo-container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .auth-loader-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Mobile (480px and down) */
+@media (max-width: 480px) {
+  .auth-loader-content {
+    width: 100px;
+    height: 100px;
+  }
+
+  .auth-loader-ring {
+    border-width: 2px;
+  }
+
+  .auth-loader-logo-container {
+    width: 60px;
+    height: 60px;
+    box-shadow: 
+      0 8px 24px rgba(37, 99, 235, 0.08),
+      0 0 50px rgba(37, 99, 235, 0.04);
+  }
+
+  .auth-loader-logo {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ============================================
+   Accessibility - Prefers Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-loader-ring,
+  .auth-loader-ring::before,
+  .auth-loader-logo-container {
+    animation: none !important;
+  }
+
+  .auth-loader-ring {
+    border-top-color: #2563eb;
+    border-right-color: #1e40af;
+    opacity: 1;
+  }
+
+  .auth-loader-logo-container {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================================
+   Dark Mode Support (Optional)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .auth-loader {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+
+  .auth-loader-logo-container {
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+      0 10px 30px rgba(37, 99, 235, 0.2),
+      0 0 60px rgba(37, 99, 235, 0.1);
+  }
+
+  .auth-loader-logo {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+}

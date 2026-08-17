@@ -1,0 +1,374 @@
+/* =========================================================
+   USER DASHBOARD
+========================================================= */
+
+.dashboard-container {
+    width: 100%;
+    min-height: calc(100vh - 85px);
+
+    padding: 50px 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: transparent;
+
+    animation: dashboardFade 0.6s ease;
+}
+
+
+/* =========================================================
+   DASHBOARD HEADING
+========================================================= */
+
+.dashboard-container > h1 {
+    margin: 0 0 80px;
+
+    color: #ffffff;
+
+    font-size: 34px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   USER CARD
+========================================================= */
+
+.user-card {
+    width: 100%;
+    max-width: 515px;
+
+    padding: 40px 45px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.15);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+========================================================= */
+
+.user-card > img {
+    width: 145px !important;
+    height: 145px !important;
+
+    margin-top: -115px;
+    margin-bottom: 25px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid rgba(255, 255, 255, 0.85);
+
+    background: rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.20);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.user-card > img:hover {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   USER NAME
+========================================================= */
+
+.user-card > h2 {
+    margin: 0 0 28px;
+
+    color: #ffffff;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   USER DETAILS
+========================================================= */
+
+.user-card > p {
+    width: 100%;
+
+    margin: 6px 0;
+
+    padding: 15px 18px;
+
+    box-sizing: border-box;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: rgba(255, 255, 255, 0.90);
+
+    font-size: 15px;
+
+    text-align: left;
+}
+
+
+.user-card > p strong {
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DASHBOARD ACTIONS
+========================================================= */
+
+.dashboard-actions {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   ACTION LINKS
+========================================================= */
+
+.dashboard-actions a {
+    min-height: 55px;
+
+    padding: 12px 10px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   ACTION HOVER
+========================================================= */
+
+.dashboard-actions a:hover {
+    background: rgba(255, 255, 255, 0.16);
+
+    border-color: rgba(255, 255, 255, 0.55);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   ACTION ACTIVE
+========================================================= */
+
+.dashboard-actions a:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   DELETE ACCOUNT BUTTON
+========================================================= */
+
+.dashboard-actions a:last-child {
+    border-color: rgba(255, 120, 120, 0.35);
+}
+
+.dashboard-actions a:last-child:hover {
+    background: rgba(220, 70, 70, 0.18);
+
+    border-color: rgba(255, 120, 120, 0.60);
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes dashboardFade {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .dashboard-container {
+        padding: 45px 15px;
+    }
+
+    .dashboard-container > h1 {
+        font-size: 30px;
+
+        margin-bottom: 75px;
+    }
+
+    .user-card {
+        max-width: 500px;
+
+        padding: 35px 30px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .dashboard-container {
+        min-height: calc(100vh - 70px);
+
+        padding: 35px 15px;
+    }
+
+    .dashboard-container > h1 {
+        font-size: 27px;
+
+        margin-bottom: 70px;
+    }
+
+    .user-card {
+        padding: 35px 20px;
+
+        border-radius: 20px;
+    }
+
+    .user-card > img {
+        width: 125px !important;
+        height: 125px !important;
+
+        margin-top: -100px;
+    }
+
+    .user-card > h2 {
+        font-size: 26px;
+    }
+
+    .user-card > p {
+        font-size: 14px;
+
+        padding: 13px 15px;
+    }
+
+    .dashboard-actions {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .dashboard-actions a {
+        min-height: 52px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 350px) {
+
+    .dashboard-container {
+        padding: 30px 10px;
+    }
+
+    .dashboard-container > h1 {
+        font-size: 24px;
+
+        margin-bottom: 65px;
+    }
+
+    .user-card {
+        padding: 30px 15px;
+    }
+
+    .user-card > img {
+        width: 110px !important;
+        height: 110px !important;
+
+        margin-top: -85px;
+    }
+
+    .user-card > h2 {
+        font-size: 23px;
+    }
+}

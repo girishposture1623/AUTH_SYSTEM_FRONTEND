@@ -1,0 +1,441 @@
+/* =========================================================
+   ADMIN DASHBOARD
+========================================================= */
+
+.admin-dashboard {
+    width: 100%;
+    min-height: calc(100vh - 85px);
+
+    padding: 40px 30px;
+
+    color: #fff;
+
+    animation: adminFadeIn 0.6s ease;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.admin-dashboard > h1 {
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    font-size: 32px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   TOTAL USERS
+========================================================= */
+
+.admin-dashboard > h3 {
+    width: fit-content;
+
+    margin: 0 auto 25px;
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    color: rgba(255, 255, 255, 0.90);
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   TABLE CONTAINER
+========================================================= */
+
+.admin-dashboard table {
+    width: 100% !important;
+
+    border-collapse: separate !important;
+
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.admin-dashboard table thead {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+.admin-dashboard table th {
+    padding: 15px 14px;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.admin-dashboard table td {
+    padding: 14px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 13px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   ROW HOVER
+========================================================= */
+
+.admin-dashboard table tbody tr {
+    transition: background 0.25s ease;
+}
+
+
+.admin-dashboard table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* Last row */
+
+.admin-dashboard table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.admin-dashboard td:nth-child(5) {
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.admin-dashboard td:last-child {
+    min-width: 260px;
+}
+
+
+/* =========================================================
+   ALL ADMIN BUTTONS
+========================================================= */
+
+.admin-dashboard button {
+    min-height: 36px;
+
+    padding: 8px 12px;
+
+    margin: 3px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    color: #5b5bd6;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.admin-dashboard button:hover {
+    transform: translateY(-2px);
+
+    background: #fff;
+
+    box-shadow:
+        0 7px 18px rgba(255, 255, 255, 0.18);
+}
+
+
+.admin-dashboard button:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================================
+   CONTACT REQUESTS SECTION
+========================================================= */
+
+.admin-dashboard > div {
+    margin-top: 50px !important;
+}
+
+
+/* =========================================================
+   CONTACT TITLE
+========================================================= */
+
+.admin-dashboard > div > h2 {
+    margin-bottom: 20px;
+
+    color: #fff;
+
+    font-size: 25px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CONTACT LOADING / EMPTY MESSAGE
+========================================================= */
+
+.admin-dashboard > div > p {
+    padding: 18px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    color: rgba(255, 255, 255, 0.75);
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   CONTACT TABLE
+========================================================= */
+
+.admin-dashboard > div table {
+    margin-top: 20px !important;
+}
+
+
+/* =========================================================
+   CONTACT MESSAGE
+========================================================= */
+
+.admin-dashboard > div table td:nth-child(3) {
+    max-width: 350px;
+
+    line-height: 1.5;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   CONTACT STATUS
+========================================================= */
+
+.admin-dashboard > div table td:nth-child(4) {
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACTIVE TEXT
+========================================================= */
+
+.admin-dashboard span {
+    color: rgba(255, 255, 255, 0.70);
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   FADE ANIMATION
+========================================================= */
+
+@keyframes adminFadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .admin-dashboard {
+        padding: 30px 20px;
+    }
+
+
+    .admin-dashboard table {
+        display: block;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+    }
+
+
+    .admin-dashboard table th,
+    .admin-dashboard table td {
+        padding: 12px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .admin-dashboard {
+        min-height: calc(100vh - 70px);
+
+        padding: 25px 12px;
+    }
+
+
+    .admin-dashboard > h1 {
+        font-size: 27px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .admin-dashboard > h3 {
+        font-size: 13px;
+
+        padding: 9px 14px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .admin-dashboard > div {
+        margin-top: 35px !important;
+    }
+
+
+    .admin-dashboard > div > h2 {
+        font-size: 22px;
+    }
+
+
+    .admin-dashboard table th {
+        font-size: 12px;
+
+        padding: 11px;
+    }
+
+
+    .admin-dashboard table td {
+        font-size: 12px;
+
+        padding: 11px;
+    }
+
+
+    .admin-dashboard button {
+        min-height: 34px;
+
+        padding: 7px 10px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .admin-dashboard {
+        padding: 20px 10px;
+    }
+
+
+    .admin-dashboard > h1 {
+        font-size: 24px;
+    }
+
+
+    .admin-dashboard > h3 {
+        font-size: 12px;
+    }
+
+
+    .admin-dashboard > div > h2 {
+        font-size: 20px;
+    }
+}

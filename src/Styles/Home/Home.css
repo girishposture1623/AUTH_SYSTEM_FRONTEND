@@ -1,0 +1,846 @@
+/* =========================================================
+   HOME PAGE
+========================================================= */
+
+.home-page {
+    width: 100%;
+    min-height: 100vh;
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.home-hero {
+    width: 100%;
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(255, 255, 255, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(255, 255, 255, 0.08),
+            transparent 35%
+        );
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.home-hero-content {
+    width: 100%;
+    max-width: 850px;
+
+    animation: homeHeroFade 0.8s ease;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.home-hero-content h1 {
+    margin: 0;
+
+    font-size: 58px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+    color: #ffffff;
+}
+
+
+.home-hero-content h1 span {
+    display: inline-block;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 25px rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.home-hero-content p {
+    max-width: 700px;
+
+    margin: 25px auto 0;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO ACTIONS
+========================================================= */
+
+.home-hero-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.home-primary-btn {
+    min-width: 150px;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #5b5bd6;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.home-primary-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(255, 255, 255, 0.22);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.home-secondary-btn {
+    min-width: 150px;
+
+    padding: 13px 25px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.home-secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.16);
+
+    border-color: rgba(255, 255, 255, 0.60);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   FEATURES SECTION
+========================================================= */
+
+.home-features {
+    width: 100%;
+
+    padding: 90px 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   FEATURES TITLE
+========================================================= */
+
+.home-features h2 {
+    margin: 0;
+
+    font-size: 36px;
+
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SECTION DESCRIPTION
+========================================================= */
+
+.home-section-description {
+    max-width: 600px;
+
+    margin: 15px auto 45px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FEATURE GRID
+========================================================= */
+
+.home-feature-grid {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
+.home-feature-card {
+    min-height: 180px;
+
+    padding: 28px;
+
+    box-sizing: border-box;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Card Hover */
+
+.home-feature-card:hover {
+    transform: translateY(-7px);
+
+    background: rgba(255, 255, 255, 0.13);
+
+    border-color: rgba(255, 255, 255, 0.28);
+}
+
+
+/* =========================================================
+   FEATURE CARD TITLE
+========================================================= */
+
+.home-feature-card h3 {
+    margin: 0 0 14px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FEATURE CARD DESCRIPTION
+========================================================= */
+
+.home-feature-card p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SECURITY SECTION
+========================================================= */
+
+.home-security {
+    width: 100%;
+
+    padding: 90px 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+/* =========================================================
+   SECURITY CONTENT
+========================================================= */
+
+.home-security-content {
+    width: 100%;
+    max-width: 950px;
+
+    padding: 50px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.09);
+
+    border: 1px solid rgba(255, 255, 255, 0.17);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   SECURITY TITLE
+========================================================= */
+
+.home-security-content h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 34px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SECURITY DESCRIPTION
+========================================================= */
+
+.home-security-content > p {
+    max-width: 700px;
+
+    margin: 18px auto 30px;
+
+    color: rgba(255, 255, 255, 0.70);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SECURITY LIST
+========================================================= */
+
+.home-security-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+/* Security Item */
+
+.home-security-list span {
+    padding: 10px 16px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 13px;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.home-security-list span:hover {
+    background: rgba(255, 255, 255, 0.17);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CTA SECTION
+========================================================= */
+
+.home-cta {
+    width: 100%;
+
+    padding: 90px 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CTA TITLE
+========================================================= */
+
+.home-cta h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 36px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CTA DESCRIPTION
+========================================================= */
+
+.home-cta p {
+    margin: 15px auto 30px;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.home-cta-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 180px;
+
+    padding: 14px 28px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #5b5bd6;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.home-cta-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(255, 255, 255, 0.22);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.home-footer {
+    width: 100%;
+
+    padding: 50px 20px 30px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   FOOTER TITLE
+========================================================= */
+
+.home-footer h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FOOTER DESCRIPTION
+========================================================= */
+
+.home-footer > p {
+    margin: 10px 0 20px;
+
+    color: rgba(255, 255, 255, 0.60);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.home-footer-links {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+.home-footer-links a {
+    color: rgba(255, 255, 255, 0.80);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.home-footer-links a:hover {
+    color: #ffffff;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.home-footer .home-copyright {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   HERO ANIMATION
+========================================================= */
+
+@keyframes homeHeroFade {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .home-hero {
+        min-height: 580px;
+    }
+
+    .home-hero-content h1 {
+        font-size: 48px;
+    }
+
+    .home-feature-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .home-hero {
+        min-height: 520px;
+
+        padding: 70px 20px;
+    }
+
+    .home-hero-content h1 {
+        font-size: 40px;
+    }
+
+    .home-hero-content p {
+        font-size: 15px;
+    }
+
+    .home-features,
+    .home-security,
+    .home-cta {
+        padding: 70px 15px;
+    }
+
+    .home-features h2,
+    .home-cta h2 {
+        font-size: 30px;
+    }
+
+    .home-security-content {
+        padding: 35px 25px;
+    }
+
+    .home-security-content h2 {
+        font-size: 29px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .home-hero {
+        min-height: 500px;
+
+        padding: 60px 15px;
+    }
+
+    .home-hero-content h1 {
+        font-size: 34px;
+
+        letter-spacing: -0.5px;
+    }
+
+    .home-hero-content p {
+        margin-top: 20px;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .home-hero-actions {
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 12px;
+
+        margin-top: 28px;
+    }
+
+    .home-primary-btn,
+    .home-secondary-btn {
+        width: 100%;
+        max-width: 280px;
+
+        box-sizing: border-box;
+    }
+
+    .home-feature-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .home-feature-card {
+        min-height: auto;
+
+        padding: 24px;
+    }
+
+    .home-features h2,
+    .home-cta h2 {
+        font-size: 28px;
+    }
+
+    .home-security-content {
+        padding: 30px 20px;
+
+        border-radius: 18px;
+    }
+
+    .home-security-content h2 {
+        font-size: 27px;
+    }
+
+    .home-security-list {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .home-security-list span {
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .home-hero {
+        min-height: 480px;
+
+        padding: 50px 12px;
+    }
+
+    .home-hero-content h1 {
+        font-size: 30px;
+    }
+
+    .home-features,
+    .home-security,
+    .home-cta {
+        padding: 55px 12px;
+    }
+
+    .home-features h2,
+    .home-cta h2 {
+        font-size: 25px;
+    }
+
+    .home-feature-card {
+        padding: 20px;
+    }
+
+    .home-security-content {
+        padding: 25px 16px;
+    }
+
+    .home-footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .home-footer-links {
+        gap: 18px;
+    }
+}

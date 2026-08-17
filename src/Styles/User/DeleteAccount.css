@@ -1,0 +1,419 @@
+/* =========================================================
+   DELETE ACCOUNT PAGE
+========================================================= */
+
+.da-page {
+    width: 100%;
+    min-height: calc(100vh - 85px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    box-sizing: border-box;
+
+    color: #ffffff;
+
+    animation: daFade 0.6s ease;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.da-title {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 0 0 20px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-size: 32px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.da-form {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    background: rgba(255, 255, 255, 0.13);
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+
+    border-radius: 22px;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.28);
+    
+}
+
+
+/* =========================================================
+   WARNING
+========================================================= */
+
+.da-warning {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 0 0 8px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   INSTRUCTION
+========================================================= */
+
+.da-instruction {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 0 0 20px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.70);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.da-instruction strong {
+    color: #ffffff;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   PASSWORD INPUT
+========================================================= */
+
+.da-password-input {
+    width: 100%;
+    max-width: 500px;
+
+    height: 52px;
+
+    margin-top: 5px;
+
+    padding: 0 18px;
+
+    box-sizing: border-box;
+
+    border: 2px solid transparent;
+
+    outline: none;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.13);
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.da-password-input::placeholder {
+    color: rgba(255, 255, 255, 0.70);
+}
+
+
+/* Focus */
+
+.da-password-input:focus {
+    border-color: rgba(255, 255, 255, 0.75);
+
+    background: rgba(255, 255, 255, 0.20);
+
+    box-shadow:
+        0 0 18px rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   CONFIRM INPUT
+========================================================= */
+
+.da-confirm-input {
+    width: 100%;
+    max-width: 500px;
+
+    height: 52px;
+
+    margin-top: 14px;
+
+    padding: 0 18px;
+
+    box-sizing: border-box;
+
+    border: 2px solid transparent;
+
+    outline: none;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.13);
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    text-align: center;
+
+    letter-spacing: 1px;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.da-confirm-input::placeholder {
+    color: rgba(255, 255, 255, 0.70);
+}
+
+
+/* Focus */
+
+.da-confirm-input:focus {
+    border-color: rgba(255, 255, 255, 0.75);
+
+    background: rgba(255, 255, 255, 0.20);
+
+    box-shadow:
+        0 0 18px rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+========================================================= */
+
+.da-delete-button {
+    width: 100%;
+    max-width: 500px;
+
+    height: 55px;
+
+    margin-top: 18px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #d64545;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* Hover */
+
+.da-delete-button:hover:not(:disabled) {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(255, 255, 255, 0.20);
+}
+
+
+/* Active */
+
+.da-delete-button:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+
+/* Disabled */
+
+.da-delete-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   BACK TO DASHBOARD
+========================================================= */
+
+.da-back-link {
+    display: inline-flex;
+
+    justify-content: center;
+
+    margin-top: 22px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Hover */
+
+.da-back-link:hover {
+    opacity: 0.8;
+
+    text-decoration: underline;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes daFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .da-page {
+        min-height: calc(100vh - 70px);
+
+        padding: 30px 15px;
+    }
+
+    .da-title {
+        font-size: 29px;
+    }
+
+    .da-warning {
+        font-size: 14px;
+    }
+
+    .da-instruction {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .da-page {
+        padding: 25px 12px;
+    }
+
+    .da-title {
+        font-size: 26px;
+
+        margin-bottom: 18px;
+    }
+
+    .da-password-input,
+    .da-confirm-input {
+        height: 52px;
+
+        font-size: 14px;
+    }
+
+    .da-delete-button {
+        height: 52px;
+
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 350px) {
+
+    .da-page {
+        padding: 20px 10px;
+    }
+
+    .da-title {
+        font-size: 24px;
+    }
+}

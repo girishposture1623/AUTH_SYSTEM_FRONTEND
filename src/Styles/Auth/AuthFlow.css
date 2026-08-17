@@ -1,0 +1,566 @@
+/* =========================================================
+   GOOGLE FONT
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(102, 126, 234, 0.25),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(118, 75, 162, 0.25),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #667eea, #764ba2);
+
+  background-attachment: fixed;
+}
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.reset-password-container,
+.verify-otp-container,
+.verify-reset-otp-container {
+  /* width: 100%; */
+  /* min-height: 100vh; */
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 20px;
+
+  color: #ffffff;
+
+  animation: fadeIn 0.6s ease;
+}
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+
+.reset-password-container,
+.verify-otp-container,
+.verify-reset-otp-container {
+  position: relative;
+
+  max-width: 430px;
+
+  margin: 0 auto;
+
+  padding: 40px 35px;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  border-radius: 22px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28);
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.reset-password-container h1,
+.verify-otp-container h1,
+.verify-reset-otp-container h1 {
+  width: 100%;
+
+  margin-bottom: 12px;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.reset-password-container > p,
+.verify-otp-container > p,
+.verify-reset-otp-container > p {
+  width: 100%;
+
+  margin: 8px 0 20px;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   EMAIL HIGHLIGHT
+========================================================= */
+
+.reset-password-container strong,
+.verify-otp-container strong,
+.verify-reset-otp-container strong {
+  color: #ffffff;
+
+  font-weight: 600;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.reset-password-container form,
+.verify-otp-container form,
+.verify-reset-otp-container form {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.reset-password-container form input,
+.verify-otp-container form input,
+.verify-reset-otp-container form input {
+  width: 100%;
+
+  height: 55px;
+
+  padding: 0 18px;
+
+  border: 2px solid transparent;
+
+  outline: none;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.reset-password-container input::placeholder,
+.verify-otp-container input::placeholder,
+.verify-reset-otp-container input::placeholder {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* =========================================================
+   INPUT FOCUS
+========================================================= */
+
+.reset-password-container input:focus,
+.verify-otp-container input:focus,
+.verify-reset-otp-container input:focus {
+  border-color: rgba(255, 255, 255, 0.75);
+
+  background: rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.12);
+}
+
+/* =========================================================
+   OTP INPUT
+========================================================= */
+
+.verify-otp-container form input,
+.verify-reset-otp-container form input {
+  text-align: center;
+
+  letter-spacing: 8px;
+
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   REMOVE LETTER SPACING FROM PASSWORD
+========================================================= */
+
+.reset-password-container form input {
+  letter-spacing: 0.3px;
+}
+
+/* =========================================================
+   MAIN BUTTON
+========================================================= */
+
+.reset-password-container form button,
+.verify-otp-container form button,
+.verify-reset-otp-container form button {
+  width: 100%;
+
+  height: 55px;
+
+  margin-top: 3px;
+
+  border: none;
+
+  outline: none;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #5b5bd6;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+.reset-password-container form button:hover,
+.verify-otp-container form button:hover,
+.verify-reset-otp-container form button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 28px rgba(255, 255, 255, 0.22);
+}
+
+/* =========================================================
+   BUTTON ACTIVE
+========================================================= */
+
+.reset-password-container form button:active,
+.verify-otp-container form button:active,
+.verify-reset-otp-container form button:active {
+  transform: scale(0.98);
+}
+
+/* =========================================================
+   BUTTON DISABLED
+========================================================= */
+
+.reset-password-container form button:disabled,
+.verify-otp-container form button:disabled,
+.verify-reset-otp-container form button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   RESEND OTP BUTTON
+========================================================= */
+
+.verify-otp-container > button,
+.verify-reset-otp-container > button {
+  width: 100%;
+
+  height: 48px;
+
+  margin-top: 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover */
+
+.verify-otp-container > button:hover,
+.verify-reset-otp-container > button:hover {
+  background: rgba(255, 255, 255, 0.18);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Disabled */
+
+.verify-otp-container > button:disabled,
+.verify-reset-otp-container > button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* =========================================================
+   TIMER
+========================================================= */
+
+.verify-otp-container > p:not(:last-child),
+.verify-reset-otp-container > p:not(:last-child) {
+  margin-top: 15px;
+
+  margin-bottom: 5px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 14px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   BACK TO LOGIN
+========================================================= */
+
+.reset-password-container > p:last-child,
+.verify-otp-container > p:last-child,
+.verify-reset-otp-container > p:last-child {
+  margin-top: 22px;
+
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   LOGIN LINK
+========================================================= */
+
+.reset-password-container a,
+.verify-otp-container a,
+.verify-reset-otp-container a {
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  transition: color 0.25s ease;
+}
+
+/* Hover */
+
+.reset-password-container a:hover,
+.verify-otp-container a:hover,
+.verify-reset-otp-container a:hover {
+  color: #ffe082;
+
+  text-decoration: underline;
+}
+
+/* =========================================================
+   FADE ANIMATION
+========================================================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .reset-password-container,
+  .verify-otp-container,
+  .verify-reset-otp-container {
+    max-width: 430px;
+
+    padding: 35px 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  } 
+
+  .reset-password-container h1,
+  .verify-otp-container h1,
+  .verify-reset-otp-container h1 {
+    font-size: 28px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+  .reset-password-container,
+  .verify-otp-container,
+  .verify-reset-otp-container {
+    min-height: calc(65vh - 10px);
+
+    margin: 50px 19px;
+
+    padding: 10px 10px;
+
+    border-radius: 18px;
+  }
+
+  .reset-password-container h1,
+  .verify-otp-container h1,
+  .verify-reset-otp-container h1 {
+    font-size: 26px;
+
+    margin-bottom: 10px;
+  }
+
+  .reset-password-container > p,
+  .verify-otp-container > p,
+  .verify-reset-otp-container > p {
+    font-size: 13px;
+
+    margin-bottom: 18px;
+  }
+
+  .reset-password-container form,
+  .verify-otp-container form,
+  .verify-reset-otp-container form {
+    gap: 14px;
+  }
+
+  .reset-password-container form input,
+  .verify-otp-container form input,
+  .verify-reset-otp-container form input {
+    height: 52px;
+
+    font-size: 14px;
+  }
+
+  .verify-otp-container form input,
+  .verify-reset-otp-container form input {
+    font-size: 18px;
+
+    letter-spacing: 6px;
+  }
+
+  .reset-password-container form button,
+  .verify-otp-container form button,
+  .verify-reset-otp-container form button {
+    height: 52px;
+
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 350px) {
+  .reset-password-container,
+  .verify-otp-container,
+  .verify-reset-otp-container {
+    margin: 5px 10px;
+
+    padding: 25px 16px;
+  }
+
+  .reset-password-container h1,
+  .verify-otp-container h1,
+  .verify-reset-otp-container h1 {
+    font-size: 24px;
+  }
+
+  .reset-password-container form input,
+  .verify-otp-container form input,
+  .verify-reset-otp-container form input {
+    height: 50px;
+  }
+
+  .verify-otp-container form input,
+  .verify-reset-otp-container form input {
+    font-size: 17px;
+
+    letter-spacing: 5px;
+  }
+
+  .reset-password-container form button,
+  .verify-otp-container form button,
+  .verify-reset-otp-container form button {
+    height: 50px;
+  }
+}
