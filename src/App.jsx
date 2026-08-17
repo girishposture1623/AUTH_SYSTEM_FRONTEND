@@ -35,7 +35,7 @@ import DeleteProfileImage from "./pages/user/DeleteProfileImage";
 import DeleteAccount from "./pages/user/DeleteAccount";
 import SetPassword from "./pages/user/SetPassword";
 // ================= CSS =================
-import "./app.css";
+import "./App.css";
 
 function App() {
   return (
