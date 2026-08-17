@@ -12,7 +12,7 @@ import "../../Styles/Auth/Login.css";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { loadUser } = useAuth();
+  const { loadUser, setUser, setIsAuthenticated } = useAuth();
 
   // ================= States =================
   const [googleLoading, setGoogleLoading] = useState(false);
@@ -110,11 +110,12 @@ const Login = () => {
     try {
       const response = await login(formData);
 
-      await loadUser();
+      setUser(response.data.user);
+      setIsAuthenticated(true);
 
       toast.success(response.data.message);
 
-      navigate("/user-dashboard");
+      navigate("/user-dashboard", { replace: true });
     } catch (error) {
       const status = error.response?.status;
 
