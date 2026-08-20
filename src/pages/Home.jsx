@@ -44,7 +44,7 @@ const Home = () => {
                 <div className="home-hero-content">
 
                     <h1>
-                        Welcome to
+                        Welcome to {" "}
                         <span> AUTH SYSTEM</span>
                     </h1>
 
